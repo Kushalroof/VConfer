@@ -1,7 +1,6 @@
 .meetVideoContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-auto-rows: auto;
   gap: 1rem;
   padding: 1rem;
   justify-content: center;
@@ -80,11 +79,6 @@
   text-align: center;
 }
 
-.lobbyCard h2 {
-  margin-bottom: 24px;
-  color: white;
-}
-
 .localVideoWrapper {
   margin-top: 30px;
   border-radius: 12px;
@@ -96,6 +90,7 @@
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
+
 
 .buttonContainers {
   position: fixed;
@@ -136,13 +131,11 @@
     bottom: 15px;
     gap: 10px;
   }
-
   .buttonContainers .MuiSvgIcon-root {
     font-size: 24px;
   }
 }
 
-/* CHAT STYLES */
 .MessageArea {
   position: fixed;
   top: 50%;
@@ -157,6 +150,18 @@
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   z-index: 1000;
+}
+
+
+@media (max-width: 768px) {
+  .MessageArea {
+    top: 0;
+    right: 0;
+    transform: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
 }
 
 .chatRoom {
@@ -179,11 +184,6 @@
   padding: 10px;
 }
 
-.chatDisplay p {
-  padding-left: 8px;
-}
-
-/* FIXED INPUT AREA AT BOTTOM */
 .inputArea {
   display: flex;
   padding: 8px;
@@ -207,19 +207,22 @@
   border-radius: 6px;
   color: white;
   cursor: pointer;
-  transition: background 0.2s ease;
 }
 
 .inputArea button:hover {
   background-color: #3b8dd6;
 }
 
+
 .meetVideoContainer.chatOpen {
   margin-right: 340px;
   grid-template-columns: repeat(3, 1fr) !important;
 }
 
-.meetVideoContainer.chatOpen ~ .buttonContainers {
-  left: calc(50% - 170px);
-  transform: none;
+
+@media (max-width: 768px) {
+  .meetVideoContainer.chatOpen {
+    margin-right: 0;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;
+  }
 }

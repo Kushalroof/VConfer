@@ -307,7 +307,7 @@ export default function VideoMeetComponent() {
   let handleEndCall = () =>{
     try{
       let tracks = localVideoRef.current.srcObject.getTracks();
-      tracks.forEach(track => track.stop);
+      tracks.forEach(track => track.stop());
     }catch(e){}
     navigate("/home");
   }
