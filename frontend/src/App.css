@@ -1,0 +1,149 @@
+  .landingPageContainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    color: #710117;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  .landingPageContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url("/public/Background.jpeg") no-repeat center center;
+    background-size: cover;
+    opacity: 0.7;
+    z-index: -1;
+  }
+
+  .landingPageContainer nav{
+    padding-inline:1.5rem ;
+    padding-block: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .landingPageContainer nav h2{
+    font-weight: 700;
+    font-size: 48px;
+    margin-left: 2vh;
+    margin-top: 2vh;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .landingPageContainer nav .navHeader p{
+    font-weight: 400;
+    font-size: 12px;
+    margin-left: 2vh;
+  }
+
+  .landingPageContainer nav .navList{
+    padding-inline:1.2rem;
+    padding-block: 0.5rem;
+    display: flex;
+    gap: 1.6rem;
+    cursor: pointer;
+  }
+
+  .landingMainContainer{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 3rem;
+  }
+
+  .landingMainContainer p{
+    width: 35vw;
+    color: #54627F;
+    margin-left: 11vh;
+    margin-top: 1rem;
+  }
+
+  .landingMainContainer img{
+    width: 35vw;
+    margin-top: 14vh;
+    margin-right: 16vh;
+  }
+
+  .aboutHeading{
+    margin-top: 25vh;
+    margin-left: 9vh;
+    font-size: 38px;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .getStartedBtn {
+    display: inline-block;
+    margin-left: 11vh;
+    margin-top: 1.3rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #710105;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+
+  .getStartedBtn:hover {
+    background-color: #4f0010;
+  }
+
+  @media (max-width: 768px) {
+  .landingPageContainer nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .landingPageContainer nav h2 {
+    font-size: 32px;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+
+  .landingPageContainer nav .navHeader p {
+    margin-left: 1rem;
+    font-size: 10px;
+  }
+
+  .landingPageContainer nav .navList {
+    padding: 0.5rem 1rem;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .landingMainContainer {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .landingMainContainer p,
+  .landingMainContainer .getStartedBtn {
+    margin-left: 0;
+    width: 90vw;
+    text-align: center;
+  }
+
+  .landingMainContainer img {
+    width: 90vw;
+    margin: 2rem 0;
+  }
+
+  .aboutHeading {
+    margin-left: 0;
+    margin-top: 2rem;
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .getStartedBtn {
+    margin: 1rem auto 0;
+    display: block;
+  }
+}
