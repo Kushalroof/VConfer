@@ -15,8 +15,9 @@ import CancelPresentationOutlinedIcon from "@mui/icons-material/CancelPresentati
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
 import Badge from "@mui/material/Badge";
 import { useNavigate } from "react-router-dom";
+import server from "../environment";
 
-const server_url = "http://localhost:8000";
+const server_url = server;
 
 var connections = {};
 const peerConfigConnections = {
